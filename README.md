@@ -1,4 +1,4 @@
-# shoe-store
+# MckePark
 
 Now the website is live and up with almost empty page at http://mckepark.github.io/
 
