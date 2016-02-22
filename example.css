@@ -2,6 +2,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    color: #e6e6e6;
 }
 
 a {
@@ -31,6 +32,13 @@ label {
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
+}
+
+.main-img {
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+
 }
 
 /*
@@ -136,7 +144,7 @@ a:focus {
  */
 
 .splash-container {
-    background: #fff;
+    background: #e6e6e6;
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
@@ -188,7 +196,7 @@ a:focus {
     width: 100%;
     min-height: 12%;
     z-index: 2;
-    background: #e6e6e6;
+    background: #fff;
 
 }
 
@@ -208,6 +216,7 @@ a:focus {
 /* This is the class used for the content sub-headers (<h3>) */
 .content-subhead {
     color: #5e5e5e;
+    text-align: center;
 }
     .content-subhead i {
         margin-right: 7px;
