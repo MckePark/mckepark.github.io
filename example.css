@@ -1,3 +1,9 @@
+* { padding: 0; margin: 0; }
+html, body, #fullheight {
+    min-height: 100% !important;
+    height: 100%;
+}
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -6,7 +12,7 @@
 }
 
 a {
-    color: #5e5e5e;
+    color: #858585;
 }
 
 /*
@@ -29,16 +35,30 @@ label {
     color: #34495e;
 }
 
+.item {
+    color: #a8a8a8 !important;
+}
+
+.content {
+    margin: 10% 0;
+}
+
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
+}
+
+.shop-img {
+    width: 160px;
+    margin: 0 auto;
+    display: block;
+    float: left;
 }
 
 .main-img {
     width: 200px;
     margin: 0 auto;
     display: block;
-
 }
 
 /*
@@ -134,7 +154,7 @@ a:hover,
 a:focus {
     background: none;
     border: none;
-    color: #858585;
+    color: #5e5e5e;
 }
 
 
@@ -189,6 +209,17 @@ a:focus {
  * -- CONTENT STYLES --
  * This represents the content area (everything below the blue section)
  */
+
+.content-wrapper-about-us {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.content-wrapper-about-us ribbon {
+    background: #fff;
+}
+
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
     position: absolute;
@@ -197,7 +228,6 @@ a:focus {
     min-height: 12%;
     z-index: 2;
     background: #fff;
-
 }
 
 /* This is the class used for the main content headers (<h2>) */
@@ -206,6 +236,15 @@ a:focus {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin: 2em 0 1em;
+}
+
+.about-us h2 {
+    margin: 8em 0 3em;
+}
+
+.about-us p {
+    line-height: 3em;
+    font-size: 1.2em;
 }
 
 /* This is a modifier class used when the content-head is inside a ribbon */
@@ -244,10 +283,13 @@ a:focus {
     body {
         font-size: 16px;
     }
-    /* We want to give the content area some more padding */
+    
+    /* We want to give the content area some more padding 
+
     .content {
         padding: 1em;
     }
+    */
 
     /* We can align the menu header to the left, but float the
     menu items to the right. */
