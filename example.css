@@ -12,7 +12,7 @@ html, body, #fullheight {
 }
 
 a {
-    color: #5e5e5e;
+    color: #858585;
 }
 
 /*
@@ -35,16 +35,30 @@ label {
     color: #34495e;
 }
 
+.item {
+    color: #a8a8a8 !important;
+}
+
+.content {
+    margin: 10% 0;
+}
+
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
+}
+
+.shop-img {
+    width: 160px;
+    margin: 0 auto;
+    display: block;
+    float: left;
 }
 
 .main-img {
     width: 200px;
     margin: 0 auto;
     display: block;
-
 }
 
 /*
@@ -140,7 +154,7 @@ a:hover,
 a:focus {
     background: none;
     border: none;
-    color: #858585;
+    color: #5e5e5e;
 }
 
 
@@ -269,10 +283,13 @@ a:focus {
     body {
         font-size: 16px;
     }
-    /* We want to give the content area some more padding */
+    
+    /* We want to give the content area some more padding 
+
     .content {
         padding: 1em;
     }
+    */
 
     /* We can align the menu header to the left, but float the
     menu items to the right. */
