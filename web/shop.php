@@ -47,37 +47,35 @@
 	<div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
 	</div>
 	<div class="pure-u-1 pure-u-md-6-8 pure-u-lg-3-5">
+		
 <?php
 
-$host = "localhost";
-$name = "root";
-$pass = "root";
-$dbname = "mckepark";
+$host = "ec2-54-235-93-178.compute-1.amazonaws.com";
+$dbname = "d466i9u3q6eeak";
+$user = "vkbkjawbiiomxk";
+$pass = "Gwao6Z_ODfvYnOcrCbvE_jsCfp";
 
-$dbi = mysqli_connect($host, $name, $pass) 
-		or die("I cannot connect to the database. Error :" . mysqli_error());
-mysqli_select_db($dbi, $dbname);
+$dbconn = pg_connect("host=$host dbname=$dbname user=$user password=$pass")
+	or die('Could not connect: ' . pg_last_error());
 
-$result = mysqli_query($dbi, "SELECT `id`, `name`, `price`, `stock`, `rating`, `paypal_link`, `img`, `description` FROM `shoes`");
+$query = "SELECT 'id', 'name', 'price', 'paypal_link', 'img', 'review' FROM shoes";
+$result = pg_query($query)
+	or die('Query failed: ' . pg_last_error());
 
-while ($myrow = mysqli_fetch_array($result))
+while ($row = pg_fetch_row($result))
 {
-	$id 		= $myrow[0];
-	$itemname 	= $myrow[1];
-	$price 		= $myrow[2];
-	$stock 		= $myrow[3];
-	$rating 	= $myrow[4];
-	$paypal_link= $myrow[5];
-	$img 		= $myrow[6];
-	$review 	= $myrow[7];
+	$id 		= $row[0];
+	$name 		= $row[1];
+	$price 		= $row[2];
+	$paypal_link= $row[3];
+	$img 		= $row[4];
+	$review 	= $row[5];
 
-  	echo <<<HEREDOC
+  	echo <<<"HEREDOC"
 <div class="pure-u-1 pure-u-md-6-8 pure-u-lg-3-5">
 	<div class="item pure-u-md-3-8 pure-u-lg-2-5">
-		$itemname<br>
+		$name<br>
 		$price<br>
-		Stock: $stock<br>
-		Rating: $rating
 		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
 			<input type="hidden" name="cmd" value="_s-xclick">
 			<input type="hidden" name="encrypted" value="$paypal_link">
@@ -92,8 +90,6 @@ while ($myrow = mysqli_fetch_array($result))
 <div class="pure-u-md-2-8 pure-u-lg-1-5" id="text$id">
 	Customer Reviews: $review
 </div>
-
-
 HEREDOC;
 }
 ?>
