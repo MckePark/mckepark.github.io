@@ -16,9 +16,5 @@ body {
 	height: 300px;
 	overflow: auto;
 	display: inline-block;
-	background-color: #33CCFF;
-}
-
-.adp-placemark{
-	background-color: #33CCFF;
+	background-color: #000000;
 }
