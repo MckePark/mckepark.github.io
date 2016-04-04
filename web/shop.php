@@ -85,9 +85,9 @@ while ($row = pg_fetch_row($result))
 	<div class="pure-u-md-3-8 pure-u-lg-2-5">
 		<img class="shop-img" id="img$id" src="$img">
 	</div>
-</div>
-<div class="pure-u-md-2-8 pure-u-lg-1-5" id="text$id">
-	Customer Reviews: $review
+	<div class="pure-u-md-2-8 pure-u-lg-1-5" id="text$id">
+		Customer Reviews: $review
+	</div>
 </div>
 HEREDOC;
 }
