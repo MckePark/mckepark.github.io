@@ -1,4 +1,5 @@
 $(document).ready(function(){
+			$("#directions").hide();
 			var directionsService = new google.maps.DirectionsService();
 			var markers = [];
 			var myLatlng = new google.maps.LatLng(42.337368,-71.095350);
@@ -13,11 +14,11 @@ $(document).ready(function(){
 				if (markers.length == 1) {
 					google.maps.event.removeListener(listener);
 					var marker2 = markers[0];
-				
+					
 					var directionsRenderer = new google.maps.DirectionsRenderer();
 					directionsRenderer.setMap(map);
 					directionsRenderer.setPanel($("#directions").get(0));
-				
+					$("#directions").show();
 					var request = {origin: marker2.getPosition(), 
 						destination: marker1.getPosition(), 
 						travelMode: google.maps.TravelMode.DRIVING};
