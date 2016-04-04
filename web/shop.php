@@ -6,7 +6,7 @@
 	<title>Shop: MckePark</title>
 	<meta name="description" content="Shoe Store: MckePark">
 	<meta name="author" content="Mckenna and Park">
-	<link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" href="pure-min.css">
 
 	<!--[if lte IE 8]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -14,7 +14,7 @@
   	<![endif]-->
 	<!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="example.css">
-	    <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+	    <link rel="stylesheet" href="grids-responsive-min.css">
 	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="shop.js" type="text/javascript"></script>
 	<!--<![endif]-->
@@ -32,12 +32,14 @@
         </ul>
     </div>
 </div>
-<div class="">
-</div>
+<div class="pure-g content">
+	<div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
+	</div>
+		
 <?php
 
 $host = "ec2-54-235-93-178.compute-1.amazonaws.com";
-$dbname="d466i9u3q6eeak";
+$dbname = "d466i9u3q6eeak";
 $user = "vkbkjawbiiomxk";
 $pass = "Gwao6Z_ODfvYnOcrCbvE_jsCfp";
 
@@ -58,27 +60,29 @@ while ($row = pg_fetch_row($result))
 	$review 	= $row[5];
 
   	echo <<<"HEREDOC"
-<div class="" style="width: 100%">
-<div class="" style="width: 25%">
-$name<br>
-$price<br>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
-	<input type="hidden" name="cmd" value="_s-xclick">
-	<input type="hidden" name="encrypted" value="$paypal_link">
-	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-	<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-</div>
-<div class="" style="width: 25%">
-<img class="shop-img" id="img$id" src="$img">
-</div>
-<div class="" style="width: 50%">
-Customer Reviews: $review
-</div>
+<div class="pure-u-1 pure-u-md-6-8 pure-u-lg-3-5">
+	<div class="item pure-u-md-2-8 pure-u-lg-1-5">
+		$name<br>
+		$price<br>
+		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="encrypted" value="$paypal_link">
+			<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</div>
+	<div class="pure-u-md-3-8 pure-u-lg-2-5">
+		<img class="shop-img" id="img$id" src="$img">
+	</div>
+	<div class="pure-u-md-3-8 pure-u-lg-2-5" id="text$id">
+		Customer Reviews: $review
+	</div>
 </div>
 HEREDOC;
 }
 ?>
+<div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
+</div>
 <div class="footer l-box is-center pure-u-1 pure-u-md-1 pure-u-lg-1">
     Designed by Kyu and Luisa
 </div>
