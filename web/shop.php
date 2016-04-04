@@ -6,7 +6,7 @@
 	<title>Shop: MckePark</title>
 	<meta name="description" content="Shoe Store: MckePark">
 	<meta name="author" content="Mckenna and Park">
-	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
 
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -56,9 +56,7 @@ $user = "vkbkjawbiiomxk";
 $pass = "Gwao6Z_ODfvYnOcrCbvE_jsCfp";
 
 $dbconn = pg_connect("host=$host dbname=$dbname user=$user password=$pass")
-	or die('Could not connect: ' . pg_last_error());
-
-$query = "SELECT id, name, price, paypal_link, img, review FROM shoes";
+	or die('Could not connect: ' . pg_last_error())$query = "SELECT id, name, price, paypal_link, img, review FROM shoes";
 $result = pg_query($query)
 	or die('Query failed: ' . pg_last_error());
 
