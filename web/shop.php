@@ -46,7 +46,6 @@
 <div class="pure-g content">
 	<div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
 	</div>
-	<div class="pure-u-1 pure-u-md-6-8 pure-u-lg-3-5">
 		
 <?php
 
@@ -93,7 +92,6 @@ while ($row = pg_fetch_row($result))
 HEREDOC;
 }
 ?>
-</div>	
 <div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
 </div>
 <div class="footer l-box is-center pure-u-1 pure-u-md-1 pure-u-lg-1">
