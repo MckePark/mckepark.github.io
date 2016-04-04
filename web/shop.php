@@ -35,7 +35,7 @@
 <div class="pure-g content">
 	<div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
 	</div>
-		
+	<div class="pure-u-1 pure-u-md-6-8 pure-u-lg-3-5">	
 <?php
 
 $host = "ec2-54-235-93-178.compute-1.amazonaws.com";
@@ -60,7 +60,7 @@ while ($row = pg_fetch_row($result))
 	$review 	= $row[5];
 
   	echo <<<"HEREDOC"
-<div class="pure-u-1 pure-u-md-6-8 pure-u-lg-3-5">
+
 	<div class="item pure-u-md-2-8 pure-u-lg-1-5">
 		$name<br>
 		$price<br>
@@ -77,10 +77,11 @@ while ($row = pg_fetch_row($result))
 	<div class="pure-u-md-3-8 pure-u-lg-2-5" id="text$id">
 		Customer Reviews: $review
 	</div>
-</div>
+
 HEREDOC;
 }
 ?>
+</div>
 <div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
 </div>
 <div class="footer l-box is-center pure-u-1 pure-u-md-1 pure-u-lg-1">
