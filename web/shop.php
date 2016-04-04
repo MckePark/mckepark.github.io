@@ -8,25 +8,16 @@
 	<meta name="author" content="Mckenna and Park">
 	<link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
 
-	<!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
 	<!--[if lte IE 8]>
-  
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-  
-<![endif]-->
-<!--[if gt IE 8]><!-->
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	    <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+  	<![endif]-->
+	<!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="example.css">
-    <!--<![endif]-->
-<!--[if gt IE 8]><!-->
-  
-    <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-    <!--style-->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="shop.js" type="text/javascript"></script>
-
-<!--<![endif]-->
+	    <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="shop.js" type="text/javascript"></script>
+	<!--<![endif]-->
 </head>
 
 <body>
@@ -72,7 +63,7 @@ while ($row = pg_fetch_row($result))
 
   	echo <<<"HEREDOC"
 <div class="pure-u-1 pure-u-md-6-8 pure-u-lg-3-5">
-	<div class="item pure-u-md-3-8 pure-u-lg-2-5">
+	<div class="item pure-u-md-2-8 pure-u-lg-1-5">
 		$name<br>
 		$price<br>
 		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
@@ -85,7 +76,7 @@ while ($row = pg_fetch_row($result))
 	<div class="pure-u-md-3-8 pure-u-lg-2-5">
 		<img class="shop-img" id="img$id" src="$img">
 	</div>
-	<div class="pure-u-md-2-8 pure-u-lg-1-5" id="text$id">
+	<div class="pure-u-md-3-8 pure-u-lg-2-5" id="text$id">
 		Customer Reviews: $review
 	</div>
 </div>
