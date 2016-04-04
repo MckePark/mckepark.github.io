@@ -58,7 +58,7 @@ while ($row = pg_fetch_row($result))
 	$review 	= $row[5];
 
   	echo <<<"HEREDOC"
-<div class="">
+<div class="" style="width: 100%">
 <div class="" style="width: 25%">
 $name<br>
 $price<br>
