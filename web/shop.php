@@ -32,8 +32,7 @@
         </ul>
     </div>
 </div>
-<div class="pure-g content">
-	<div>	
+<div class="items">	
 <?php
 
 $host = "ec2-54-235-93-178.compute-1.amazonaws.com";
@@ -59,7 +58,7 @@ while ($row = pg_fetch_row($result))
 
   	echo <<<"HEREDOC"
 
-<div style="width: 300px">
+<div class="item left">
 	$name<br>
 	$price<br>
 	<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
@@ -69,10 +68,10 @@ while ($row = pg_fetch_row($result))
 		<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 	</form>
 </div>
-<div style="width: 300px">
+<div class="item center">
 	<img class="shop-img" id="img$id" src="$img">
 </div>
-<div class="review" style="width: 200px">
+<div class="item right">
 	Customer Reviews: $review
 </div>
 <div style="clear: both">
