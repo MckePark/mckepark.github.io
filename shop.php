@@ -6,7 +6,7 @@
 	<title>Shop: MckePark</title>
 	<meta name="description" content="Shoe Store: MckePark">
 	<meta name="author" content="Mckenna and Park">
-	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
 
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
