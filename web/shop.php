@@ -58,7 +58,7 @@ $pass = "Gwao6Z_ODfvYnOcrCbvE_jsCfp";
 $dbconn = pg_connect("host=$host dbname=$dbname user=$user password=$pass")
 	or die('Could not connect: ' . pg_last_error());
 
-$query = "SELECT 'id', 'name', 'price', 'paypal_link', 'img', 'review' FROM shoes";
+$query = "SELECT id, name, price, paypal_link, img, review FROM shoes";
 $result = pg_query($query)
 	or die('Query failed: ' . pg_last_error());
 
