@@ -59,7 +59,7 @@ while ($row = pg_fetch_row($result))
 
   	echo <<<"HEREDOC"
 <div class="">
-<div class="">
+<div class="" style="width: 25%">
 $name<br>
 $price<br>
 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
@@ -69,10 +69,10 @@ $price<br>
 	<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 </div>
-<div class="">
+<div class="" style="width: 25%">
 <img class="shop-img" id="img$id" src="$img">
 </div>
-<div class="">
+<div class="" style="width: 50%">
 Customer Reviews: $review
 </div>
 </div>
