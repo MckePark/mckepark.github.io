@@ -33,9 +33,7 @@
     </div>
 </div>
 <div class="pure-g content">
-	<div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
-	</div>
-	<div class="pure-u-1 pure-u-md-6-8 pure-u-lg-3-5">	
+	<div>	
 <?php
 
 $host = "ec2-54-235-93-178.compute-1.amazonaws.com";
@@ -61,7 +59,7 @@ while ($row = pg_fetch_row($result))
 
   	echo <<<"HEREDOC"
 
-<div class="item pure-u-md-2-8 pure-u-lg-1-5">
+<div style="width: 300px">
 	$name<br>
 	$price<br>
 	<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
@@ -71,18 +69,18 @@ while ($row = pg_fetch_row($result))
 		<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 	</form>
 </div>
-<div class="img pure-u-md-3-8 pure-u-lg-2-5">
+<div style="width: 300px">
 	<img class="shop-img" id="img$id" src="$img">
 </div>
-<div class="pure-u-md-3-8 pure-u-lg-2-5" class="review">
+<div class="review" style="width: 200px">
 	Customer Reviews: $review
+</div>
+<div style="clear: both">
 </div>
 
 HEREDOC;
 }
 ?>
-</div>
-<div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
 </div>
 <div class="footer l-box is-center pure-u-1 pure-u-md-1 pure-u-lg-1">
     Designed by Kyu and Luisa
