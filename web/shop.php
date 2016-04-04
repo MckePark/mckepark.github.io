@@ -39,7 +39,7 @@
 <?php
 
 $host = "ec2-54-235-93-178.compute-1.amazonaws.com";
-$dbname = "d466i9u3q6eeak";
+$dbname="d466i9u3q6eeak";
 $user = "vkbkjawbiiomxk";
 $pass = "Gwao6Z_ODfvYnOcrCbvE_jsCfp";
 
@@ -74,7 +74,7 @@ while ($row = pg_fetch_row($result))
 	<div class="pure-u-md-3-8 pure-u-lg-2-5">
 		<img class="shop-img" id="img$id" src="$img">
 	</div>
-	<div class="pure-u-md-3-8 pure-u-lg-2-5" id="text$id">
+	<div class="pure-u-md-3-8 pure-u-lg-2-5" class="review">
 		Customer Reviews: $review
 	</div>
 
