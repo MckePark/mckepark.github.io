@@ -37,7 +37,7 @@
 <?php
 
 $host = "ec2-54-235-93-178.compute-1.amazonaws.com";
-$dbname = "d466i9u3q6eeak";
+$dbname="d466i9u3q6eeak";
 $user = "vkbkjawbiiomxk";
 $pass = "Gwao6Z_ODfvYnOcrCbvE_jsCfp";
 
