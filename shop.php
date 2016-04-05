@@ -6,24 +6,35 @@
 	<title>Shop: MckePark</title>
 	<meta name="description" content="Shoe Store: MckePark">
 	<meta name="author" content="Mckenna and Park">
-	<link rel="stylesheet" href="pure-min.css">
+	<link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
 
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<!--[if lte IE 8]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	    <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-  	<![endif]-->
-	<!--[if gt IE 8]><!-->
+  
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+  
+<![endif]-->
+<!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="example.css">
-	    <link rel="stylesheet" href="grids-responsive-min.css">
-	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="shop.js" type="text/javascript"></script>
-	<!--<![endif]-->
+    <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+  
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <!--style-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="shop.js" type="text/javascript"></script>
+
+<!--<![endif]-->
 </head>
 
 <body>
+
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
         <a class="pure-menu-heading" href="">MckePark</a>
+
         <ul class="pure-menu-list">
             <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Home</a></li>
             <li class="pure-menu-item pure-menu-selected"><a href="shop.html" class="pure-menu-link">Shop</a></li>
@@ -35,11 +46,12 @@
 <div class="pure-g content">
 	<div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
 	</div>
-	<div class="pure-u-1 pure-u-md-6-8 pure-u-lg-3-5">	
+	<div class="pure-u-1 pure-u-md-6-8 pure-u-lg-3-5">
+		
 <?php
 
 $host = "ec2-54-235-93-178.compute-1.amazonaws.com";
-$dbname="d466i9u3q6eeak";
+$dbname = "d466i9u3q6eeak";
 $user = "vkbkjawbiiomxk";
 $pass = "Gwao6Z_ODfvYnOcrCbvE_jsCfp";
 
@@ -60,9 +72,9 @@ while ($row = pg_fetch_row($result))
 	$review 	= $row[5];
 
   	echo <<<"HEREDOC"
-
-	<div class="item pure-u-md-2-8 pure-u-lg-1-5">
-		$name<br>
+<div class="pure-u-1 pure-u-md-6-8 pure-u-lg-3-5">
+	<div class="item pure-u-md-3-8 pure-u-lg-2-5">
+		$row[1]<br>
 		$price<br>
 		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
 			<input type="hidden" name="cmd" value="_s-xclick">
@@ -74,14 +86,14 @@ while ($row = pg_fetch_row($result))
 	<div class="pure-u-md-3-8 pure-u-lg-2-5">
 		<img class="shop-img" id="img$id" src="$img">
 	</div>
-	<div class="pure-u-md-3-8 pure-u-lg-2-5" class="review">
-		Customer Reviews: $review
-	</div>
-
+</div>
+<div class="pure-u-md-2-8 pure-u-lg-1-5" id="text$id">
+	Customer Reviews: $review
+</div>
 HEREDOC;
 }
 ?>
-</div>
+</div>	
 <div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
 </div>
 <div class="footer l-box is-center pure-u-1 pure-u-md-1 pure-u-lg-1">

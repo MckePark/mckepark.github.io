@@ -1,23 +1,19 @@
-# php-getting-started
+# MckePark
 
-A barebones PHP app that makes use of the [Silex](http://silex.sensiolabs.org/) web framework, which can easily be deployed to Heroku.
+Now the website is live and up with almost empty page at http://mckepark.github.io/
 
-This application supports the [Getting Started with PHP on Heroku](https://devcenter.heroku.com/articles/getting-started-with-php) article - check it out.
+Payment: Stripe or Paypal
 
-## Deploying
+CSS Framework: purecss.io
 
-Install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
+Color scheme
 
-```sh
-$ git clone git@github.com:heroku/php-getting-started.git # or clone your own fork
-$ cd php-getting-started
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
+Darkest first
 
-## Documentation
-
-For more information about using PHP on Heroku, see these Dev Center articles:
-
-- [PHP on Heroku](https://devcenter.heroku.com/categories/php)
+#000	black - will not use
+#5e5e5e	link hover
+#858585	link 
+#a8a8a8	top navigation bar/ footer
+#ccc	ribbon(just above footer)
+#e6e6e6	text
+#fff	white
