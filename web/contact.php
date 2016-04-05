@@ -102,9 +102,10 @@ else {
     } 
 
     $sql = "INSERT INTO guestbook (name, body) VALUES ($name, $body)";
+    $result = pg_query($sql);
 }
 
-$result = pg_query($sql);
+
 if ($result)
 {
     echo "<center>Your details have been added to the database<br>";
