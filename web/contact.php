@@ -54,7 +54,7 @@
 <br>
             Phone: +1-800-000-0000
             </p>
-            <form name="form1" method="post" action="gb.php">
+            <form name="form1" method="post" action="contact.php">
 <table width="40%" border="1" align="center" cellpadding="0" cellspacing="0">
 <tr align="left" valign="top">
 <td width="22%">name
@@ -102,14 +102,14 @@ else {
     } 
 
     $sql = "INSERT INTO guestbook (name, body) VALUES ($name, $body)";
-    $result = pg_query($sql);
 }
 
+$result = pg_query($sql);
 
 if ($result)
 {
     echo "<center>Your details have been added to the database<br>";
-    echo "<a href='gb.php'>Reload this page</a></center>" ;
+    echo "<a href='contact.php'>Reload this page</a></center>" ;
 } 
 else
 {
@@ -118,9 +118,9 @@ else
 
 $result = pg_query("select name, body from guestbook ORDER BY id desc");
 
-while ($myrow = pg_fetch_array($result))
+while ($row = pg_fetch_array($result))
 {
-   echo "<hr><b>name:</b> $myrow[0]<br> <b>body: </b>$myrow[1]<br>";
+   echo "<hr><b>name:</b> $row[0]<br> <b>body: </b>$row[1]<br>";
 }
 
 ?>
