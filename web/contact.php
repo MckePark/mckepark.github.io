@@ -101,7 +101,7 @@ else {
       die("You haven't entered any comment");
     } 
 
-    $sql = "INSERT INTO guestbook (name, body) VALUES ($name, $body)";
+    $sql = "INSERT INTO guestbook (name, body) VALUES ('$name', '$body')";
 }
 
 $result = pg_query($sql);
