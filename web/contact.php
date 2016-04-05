@@ -104,7 +104,7 @@ else {
     $sql = "INSERT INTO guestbook (name, body) VALUES ('$name','$body')";
 }
 
-$result = pg_query($dbi, $sql);
+$result = pg_query($sql);
 if ($result)
 {
     echo "<center>Your details have been added to the database<br>";
@@ -115,7 +115,7 @@ else
     echo "Your details were not added due to some database problem";
 }
 
-$result = pg_query($dbi, "select name, body from guestbook ORDER BY id desc");
+$result = pg_query("select name, body from guestbook ORDER BY id desc");
 
 while ($myrow = pg_fetch_array($result))
 {
