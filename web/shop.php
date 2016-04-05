@@ -32,7 +32,10 @@
         </ul>
     </div>
 </div>
-<div class="items">	
+<div class="pure-g content">
+	<div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
+	</div>
+	<div class="pure-u-1 pure-u-md-6-8 pure-u-lg-3-5">	
 <?php
 
 $host = "ec2-54-235-93-178.compute-1.amazonaws.com";
@@ -58,28 +61,28 @@ while ($row = pg_fetch_row($result))
 
   	echo <<<"HEREDOC"
 
-<div class="item left">
-	$name<br>
-	$price<br>
-	<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
-		<input type="hidden" name="cmd" value="_s-xclick">
-		<input type="hidden" name="encrypted" value="$paypal_link">
-		<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-		<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-	</form>
-</div>
-<div class="item center">
-	<img class="shop-img" id="img$id" src="$img">
-</div>
-<div class="item right">
-	Customer Reviews: $review
-</div>
-<div style="clear: both">
-</div>
+	<div class="item pure-u-md-2-8 pure-u-lg-1-5">
+		$name<br>
+		$price<br>
+		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="encrypted" value="$paypal_link">
+			<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</div>
+	<div class="pure-u-md-3-8 pure-u-lg-2-5">
+		<img class="shop-img" id="img$id" src="$img">
+	</div>
+	<div class="pure-u-md-3-8 pure-u-lg-2-5" class="review">
+		Customer Reviews: $review
+	</div>
 
 HEREDOC;
 }
 ?>
+</div>
+<div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
 </div>
 <div class="footer l-box is-center pure-u-1 pure-u-md-1 pure-u-lg-1">
     Designed by Kyu and Luisa
