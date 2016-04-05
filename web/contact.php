@@ -82,9 +82,8 @@ $dbname="d466i9u3q6eeak";
 $user = "vkbkjawbiiomxk";
 $pass = "Gwao6Z_ODfvYnOcrCbvE_jsCfp";
 
-$dbi = mysqli_connect($host, $name, $pass) 
-        or die("I cannot connect to the database. Error :" . mysqli_error());
-mysqli_select_db($dbi, $dbname);
+$dbconn = pg_connect("host=$host dbname=$dbname user=$user password=$pass")
+    or die('Could not connect: ' . pg_last_error());
 
 $name = $_POST["name"];
 $body = $_POST["body"];
@@ -105,7 +104,7 @@ else {
     $sql = "INSERT INTO guestbook (name, body) VALUES ('$name','$body')";
 }
 
-$result = mysqli_query($dbi, $sql);
+$result = pg_query($dbi, $sql);
 if ($result)
 {
     echo "<center>Your details have been added to the database<br>";
@@ -116,9 +115,9 @@ else
     echo "Your details were not added due to some database problem";
 }
 
-$result = mysqli_query($dbi, "select name, body from guestbook ORDER BY id desc");
+$result = pg_query($dbi, "select name, body from guestbook ORDER BY id desc");
 
-while ($myrow = mysqli_fetch_array($result))
+while ($myrow = pg_fetch_array($result))
 {
    echo "<hr><b>name:</b> $myrow[0]<br> <b>body: </b>$myrow[1]<br>";
 }
