@@ -22,4 +22,24 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
+$app->get('/shop', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('shop.twig');
+});
+
+$app->get('/about-us', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('about-us.twig');
+});
+
+$app->get('/contact', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('contact.twig');
+});
+
+$app->get('/cowsay', function() use($app) {
+  $app['monolog']->addDebug('cowsay');
+  return "<pre>".\Cowsayphp\Cow::say("Cool beans")."</pre>";
+});
+
 $app->run();
