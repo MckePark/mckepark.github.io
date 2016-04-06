@@ -24,7 +24,7 @@ $app->get('/', function() use($app) {
 
 $app->get('/shop', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('shop.php');
+  return $app['php']->render('shop.php');
 });
 
 $app->get('/about-us', function() use($app) {
@@ -34,7 +34,7 @@ $app->get('/about-us', function() use($app) {
 
 $app->get('/contact', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('contact.php');
+  return $app['php']->render('contact.php');
 });
 
 $app->run();
