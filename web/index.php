@@ -24,7 +24,7 @@ $app->get('/', function() use($app) {
 
 $app->get('/shop', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('shop.twig');
+  return $app['twig']->render('shop.php');
 });
 
 $app->get('/about-us', function() use($app) {
@@ -34,12 +34,7 @@ $app->get('/about-us', function() use($app) {
 
 $app->get('/contact', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('contact.twig');
-});
-
-$app->get('/cowsay', function() use($app) {
-  $app['monolog']->addDebug('cowsay');
-  return "<pre>".\Cowsayphp\Cow::say("Cool beans")."</pre>";
+  return $app['twig']->render('contact.php');
 });
 
 $app->run();
