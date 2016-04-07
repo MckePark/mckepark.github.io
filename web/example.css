@@ -3,6 +3,7 @@
     overflow: hidden;
 }
 
+img { border: 0; }
 
 * { padding: 0; margin: 0; }
 html, body, #fullheight {
@@ -95,7 +96,6 @@ label {
 }
 
 .pure-form input[type] {
-    border: 2px solid #ddd;
     box-shadow: none;
     font-size: 100%;
     width: 100%;
