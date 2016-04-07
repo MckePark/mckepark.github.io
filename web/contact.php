@@ -134,5 +134,6 @@ while ($row = pg_fetch_array($result))
   <div class="footer l-box is-center pure-u-1 pure-u-md-1 pure-u-lg-1">
     Designed by Kyu and Luisa
 </div>
+</div>
 </body>
 </html>
