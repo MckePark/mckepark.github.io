@@ -115,7 +115,7 @@ if ($result)
 } 
 else
 {
-    echo "Your details were not added due to some database problem";
+	echo "";  
 }
 
 $result = pg_query("select name, body from guestbook ORDER BY id desc");

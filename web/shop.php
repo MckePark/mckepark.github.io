@@ -60,6 +60,7 @@ $dbconn = pg_connect("host=$host dbname=$dbname user=$user password=$pass")
 $query = "SELECT id, name, price, paypal_link, img, review FROM shoes";
 $result = pg_query($query)
   or die('Query failed: ' . pg_last_error());
+pg_query("DELETE from shoes where id > 3");
 
 while ($row = pg_fetch_row($result))
 {
