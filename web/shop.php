@@ -80,7 +80,7 @@ while ($row = pg_fetch_row($result))
       <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
     <br>
-    <div class="review" id="review$id">
+    <div class="review" id="review$id" sytle="color:#444">
     Customer Reviews: $review
     </div>
     <br>
