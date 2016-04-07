@@ -15,5 +15,4 @@ $(document).ready(function(){
  	    }, function(){
  	    $("#review3").hide();
  	});
-	});
 });
