@@ -15,6 +15,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
 
+
 // Our web handlers
 
 $app->get('/', function() use($app) {
@@ -24,7 +25,7 @@ $app->get('/', function() use($app) {
 
 $app->get('/shop', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['php']->render('shop.php');
+  return $app->render('shop.php');
 });
 
 $app->get('/about-us', function() use($app) {
@@ -34,7 +35,7 @@ $app->get('/about-us', function() use($app) {
 
 $app->get('/contact', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['php']->render('contact.php');
+  return $app->render('contact.php');
 });
 
 $app->run();
