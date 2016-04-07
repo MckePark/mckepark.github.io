@@ -1,3 +1,10 @@
+.img {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+img { border: 0; }
+
 * { padding: 0; margin: 0; }
 html, body, #fullheight {
     min-height: 100% !important;
@@ -91,7 +98,6 @@ label {
 }
 
 .pure-form input[type] {
-    border: 2px solid #ddd;
     box-shadow: none;
     font-size: 100%;
     width: 100%;
@@ -239,7 +245,7 @@ a:focus {
 }
 
 .about-us h2 {
-    margin: 8em 0 3em;
+    margin: 3em 0 3em;
 }
 
 .about-us p {

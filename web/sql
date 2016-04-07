@@ -1,0 +1,3 @@
+'/Applications/Postgres.app/Contents/Versions/9.5/bin'/psql -h ec2-54-235-93-178.compute-1.amazonaws.com -p 5432 -d d466i9u3q6eeak -U vkbkjawbiiomxk
+
+Gwao6Z_ODfvYnOcrCbvE_jsCfp
