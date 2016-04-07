@@ -27,11 +27,5 @@ $(document).ready(function(){
 							directionsRenderer.setDirections(result); }
 					});
 				}  // end if
-
 			});  // end listener
-
-					var infowindow = new google.maps.InfoWindow({
-  					content: "MCKEPARK"
-  						});
-					infowindow.open(map,marker1);
 		});  // end ready
