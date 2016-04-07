@@ -60,7 +60,13 @@ $dbconn = pg_connect("host=$host dbname=$dbname user=$user password=$pass")
 $query = "SELECT id, name, price, paypal_link, img, review FROM shoes";
 $result = pg_query($query)
   or die('Query failed: ' . pg_last_error());
-$temp = pg_query("DELETE from shoes where id > 3");
+$temp = pg_query("DELETE from shoes where id = 4");
+echo $temp;
+$temp = pg_query("DELETE from shoes where id = 5");
+echo $temp;
+$temp = pg_query("DELETE from shoes where id = 6");
+echo $temp;
+$temp = pg_query("DELETE from shoes where id = 7");
 echo $temp;
 
 while ($row = pg_fetch_row($result))
