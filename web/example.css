@@ -3,7 +3,10 @@
     overflow: hidden;
 }
 
+<<<<<<< HEAD
 img { border: 0; }
+=======
+>>>>>>> 02675228a7821ed9dc13d292a87fff709b37bee1
 
 * { padding: 0; margin: 0; }
 html, body, #fullheight {
@@ -98,6 +101,10 @@ label {
 }
 
 .pure-form input[type] {
+<<<<<<< HEAD
+=======
+    border: 2px solid #ddd;
+>>>>>>> 02675228a7821ed9dc13d292a87fff709b37bee1
     box-shadow: none;
     font-size: 100%;
     width: 100%;
