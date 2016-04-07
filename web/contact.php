@@ -1,45 +1,47 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Contact: MckePark</title>
-	<meta name="description" content="Shoe Store: MckePark">
-	<meta name="author" content="Mckenna and Park">
+  <title>MckePark</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Shoe Store: MckePark">
+<meta name="author" content="Mckenna and Park">
 
-	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+<link rel="stylesheet" href="example.css">
 
-	<!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<!--[if lte IE 8]>
-  
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-  
-<![endif]-->
-<!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="example.css">
-    <!--<![endif]-->
-<!--[if gt IE 8]><!-->
-  
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-  
-<!--<![endif]-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 </head>
 
 <body>
-<div class="header">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">MckePark</a>
+  <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+      </li>
+      <li>
+        <a href="/shop"><span class="glyphicon glyphicon-user"></span> Shop</a>
+      </li>
+      <li>
+        <a href="/about-us"><span class="glyphicon glyphicon-user"></span> About Us</a>
+      </li>
+      <li>
+        <a href="/contact"><span class="glyphicon glyphicon-user"></span> Contact</a>
+      </li>
+      
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="navbar-right">
+        <a href="/"><span class="glyphicon glyphicon-book"></span> MckePark</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Home</a></li>
-            <li class="pure-menu-item"><a href="oldshop.html" class="pure-menu-link">Shop</a></li>
-            <li class="pure-menu-item"><a href="about-us.html" class="pure-menu-link">About Us</a></li>
-            <li class="pure-menu-item pure-menu-selected"><a href="contact.html" class="pure-menu-link">Contact</a></li>
-        </ul>
-    </div>
-</div>
 
 <div class="content-wrapper-about-us">
      <div class="ribbon l-box-lrg pure-g">
@@ -128,12 +130,9 @@ while ($row = pg_fetch_array($result))
 <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-5 pure-u-lg-1-3">
           </div>
     </div>
-
-
-    <div class="footer l-box is-center">
-        Designed by Kyu and Luisa
-    </div>
+    
+  <div class="footer l-box is-center pure-u-1 pure-u-md-1 pure-u-lg-1">
+    Designed by Kyu and Luisa
 </div>
-
 </body>
 </html>

@@ -1,41 +1,52 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Shop: MckePark</title>
-	<meta name="description" content="Shoe Store: MckePark">
-	<meta name="author" content="Mckenna and Park">
-	<link rel="stylesheet" href="pure-min.css">
+  <title>MckePark</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Shoe Store: MckePark">
+<meta name="author" content="Mckenna and Park">
 
-	<!--[if lte IE 8]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	    <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-  	<![endif]-->
-	<!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="example.css">
-	    <link rel="stylesheet" href="grids-responsive-min.css">
-	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="shop.js" type="text/javascript"></script>
-	<!--<![endif]-->
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+<link rel="stylesheet" href="example.css">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 </head>
 
 <body>
-<div class="header">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">MckePark</a>
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Home</a></li>
-            <li class="pure-menu-item pure-menu-selected"><a href="shop.html" class="pure-menu-link">Shop</a></li>
-            <li class="pure-menu-item"><a href="about-us.html" class="pure-menu-link">About Us</a></li>
-            <li class="pure-menu-item"><a href="contact.html" class="pure-menu-link">Contact</a></li>
-        </ul>
-    </div>
-</div>
+  <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+      </li>
+      <li>
+        <a href="/shop"><span class="glyphicon glyphicon-user"></span> Shop</a>
+      </li>
+      <li>
+        <a href="/about-us"><span class="glyphicon glyphicon-user"></span> About Us</a>
+      </li>
+      <li>
+        <a href="/contact"><span class="glyphicon glyphicon-user"></span> Contact</a>
+      </li>
+      
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="navbar-right">
+        <a href="/"><span class="glyphicon glyphicon-book"></span> MckePark</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<script src="shop.js" type="text/javascript"></script>
+
 <div class="pure-g content">
-	<div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
-	</div>
-	<div class="pure-u-1 pure-u-md-6-8 pure-u-lg-3-5">	
+  <div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
+  </div>
+  <div class="pure-u-1 pure-u-md-6-8 pure-u-lg-3-5">  
 <?php
 
 $host = "ec2-54-235-93-178.compute-1.amazonaws.com";
@@ -44,49 +55,51 @@ $user = "vkbkjawbiiomxk";
 $pass = "Gwao6Z_ODfvYnOcrCbvE_jsCfp";
 
 $dbconn = pg_connect("host=$host dbname=$dbname user=$user password=$pass")
-	or die('Could not connect: ' . pg_last_error());
+  or die('Could not connect: ' . pg_last_error());
 
 $query = "SELECT id, name, price, paypal_link, img, review FROM shoes";
 $result = pg_query($query)
-	or die('Query failed: ' . pg_last_error());
+  or die('Query failed: ' . pg_last_error());
 
 while ($row = pg_fetch_row($result))
 {
-	$id 		= $row[0];
-	$name 		= $row[1];
-	$price 		= $row[2];
-	$paypal_link= $row[3];
-	$img 		= $row[4];
-	$review 	= $row[5];
+  $id     = $row[0];
+  $name     = $row[1];
+  $price    = $row[2];
+  $paypal_link= $row[3];
+  $img    = $row[4];
+  $review   = $row[5];
 
-  	echo <<<"HEREDOC"
+    echo <<<"HEREDOC"
 
-	<div class="item pure-u-md-2-8 pure-u-lg-1-5">
-		$name<br>
-		$price<br>
-		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
-			<input type="hidden" name="cmd" value="_s-xclick">
-			<input type="hidden" name="encrypted" value="$paypal_link">
-			<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-		</form>
-	</div>
-	<div class="pure-u-md-3-8 pure-u-lg-2-5">
-		<img class="shop-img" id="img$id" src="$img">
-	</div>
-	<div class="pure-u-md-3-8 pure-u-lg-2-5" class="review">
-		Customer Reviews: $review
-	</div>
+  <div class="item pure-u-md-2-8 pure-u-lg-1-5">
+    $name<br>
+    $price<br>
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="encrypted" value="$paypal_link">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+  </div>
+  <div class="pure-u-md-3-8 pure-u-lg-2-5">
+    <img class="shop-img" id="img$id" src="$img">
+  </div>
+  <div class="pure-u-md-3-8 pure-u-lg-2-5" class="review">
+    Customer Reviews: $review
+  </div>
 
 HEREDOC;
 }
 ?>
 </div>
+
 <div class="pure-u-1 pure-u-md-1-8 pure-u-lg-1-5">
 </div>
-<div class="footer l-box is-center pure-u-1 pure-u-md-1 pure-u-lg-1">
+
+
+  <div class="footer l-box is-center pure-u-1 pure-u-md-1 pure-u-lg-1">
     Designed by Kyu and Luisa
-</div>
 </div>
 </body>
 </html>
