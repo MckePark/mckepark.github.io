@@ -70,6 +70,7 @@ while ($row = pg_fetch_row($result))
     echo <<<"HEREDOC"
 
   <div class="item pure-u-md-1 pure-u-lg-1">
+    <img class="shop-img" id="img$id" src="$img" style="clear:both"><br>
     $name<br>
     $price<br>
     <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
@@ -78,8 +79,6 @@ while ($row = pg_fetch_row($result))
       <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
       <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
-    <br>
-    <img class="shop-img" id="img$id" src="$img" style="clear:both">
     <br>
     Customer Reviews: $review
     <br>
