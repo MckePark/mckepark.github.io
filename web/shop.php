@@ -36,7 +36,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li class="navbar-right">
-        <a href="/"><span class="glyphicon glyphicon-book"></span> MckePark</a>
+        <a href="/index.html"><span class="glyphicon glyphicon-book"></span> MckePark</a>
       </li>
     </ul>
   </div>
