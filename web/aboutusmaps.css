@@ -1,19 +1,20 @@
 #map {
-	margin-left: 30px;
+	margin-left: 180px;
 	margin-top: 55px;
-	width: 25%;
+	width: 33%;
 	height: 300px;
 	display: inline-block;
 }
 #directions	{
 	margin-left: 15px;
 	margin-top: 55px;
-	width: 25%;
+	width: 33%;
 	height: 300px;
 	overflow: auto;
 	display: inline-block;
-	background-color: #33CCFF;
+	background-color: #00802b;
+	color: #000000;
 }
 .adp-placemark{
-	background-color: #33CCFF;
+	background-color: #00802b;
 }

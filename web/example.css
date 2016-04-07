@@ -14,7 +14,6 @@ html, body, #fullheight {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    color: #e6e6e6;
 }
 
 a {
@@ -32,7 +31,6 @@ body {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -340,4 +338,28 @@ a:focus {
     .splash-head {
         font-size: 300%;
     }
+}
+
+/*textarea for contact.php*/
+#textarea1{
+    position:relative; 
+    left:95px; 
+    resize:none; 
+    overflow-y:scroll;
+    color: #000000;
+}
+
+/*submit button for contact.php*/
+#submitb{
+    position:relative; 
+    left:265px; 
+    width:75px; 
+    background:#80bfff;
+}
+
+/*class to get rid of that extra white space. recreated boostrap class (.navbar) without the marginbottom*/
+.navington{
+position: relative;
+min-height: 50px;
+border:1px solid transparent;
 }

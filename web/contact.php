@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+  <nav class="navington navbar-default navbar-static-top navbar-inverse">
   <div class="container">
     <ul class="nav navbar-nav">
       <li>
@@ -45,36 +45,29 @@
 
 <div class="content-wrapper-about-us">
      <div class="ribbon l-box-lrg pure-g">
-          <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-5 pure-u-lg-1-3">
-          </div>
-  <div class="pure-u-1 pure-u-md-3-5 pure-u-lg-1-3 about-us">
+  <div>
 
-            <h2 class="content-head content-head-ribbon">Contact Us</h2>
-
-            <p>
-            Email: donotemail@mckepark.github.io
-<br>
-            Phone: +1-800-000-0000
+            <h1 style="color:#00802b">Contact Us</h1>
+            <p style="width:50%; color:#000000">
+            Contact Us! We'd love to here from you. Drop us a message and we are sure to respond as soon as we can. Our customers mean the most to us.<br>
+            <br>
+            <img style="height:200px; width:500px"src="contactus.jpg"><br>
+            <br>
+            Feel free to email us or call our toll free number with any concerns regarding your purchase.
+            <br>
+            <br>
+            <h4 style="color:#990033"> 
+            Email: donotemail@mckepark.github.io<br>
+            Phone: +1-800-000-0000</h4>
             </p>
-            <form name="form1" method="post" action="contact.php">
-<table width="40%" border="1" align="center" cellpadding="0" cellspacing="0">
-<tr align="left" valign="top">
-<td width="22%">name
-</td>
-<td width="78%">
-<input name="name" type="text" width="100%" >
-</td>
-</tr>
-<tr align="left" valign="top">
-<td>Comments &nbsp;</td>
-<td><textarea name="body" rows="3" width="100%" ></textarea></td>
-</tr>
-<tr align="left" valign="top">
-<td colspan="2"><div align="center">
-<input type="submit" name="Submit" value="Submit">
-</div></td>
-</tr>
-</table>
+<form name="form1" method="post" action="contact.php">
+  <div style="color:#000000">
+    <br>
+        Name:<input style="position:relative; left:50px"name="name" type="text" width="100%" ><br>
+        Comments:<p><textarea id="textarea1" name="body" rows="4" cols="50" ></textarea></p>
+        <input id="submitb" type="submit" name="Submit" value="Submit" >
+ </div>
+
 </form>
 
 <?
@@ -110,8 +103,8 @@ $result = pg_query($sql);
 
 if ($result)
 {
-    echo "<center>Your details have been added to the database<br>";
-    echo "<a href='contact.php'>Reload this page</a></center>" ;
+    echo "Your details have been added to the database<br>";
+    echo "<a href='contact.php'>Reload this page</a>" ;
 } 
 else
 {
