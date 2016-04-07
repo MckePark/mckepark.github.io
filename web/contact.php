@@ -20,17 +20,17 @@
   <nav class="navbar navbar-default navbar-static-top navbar-inverse">
   <div class="container">
     <ul class="nav navbar-nav">
+      <li>
+        <a href="/index.html"><span class="glyphicon glyphicon-home"></span> Home</a>
+      </li>
+      <li>
+        <a href="/shop.php"><span class="glyphicon glyphicon-user"></span> Shop</a>
+      </li>
+      <li>
+        <a href="/about-us.html"><span class="glyphicon glyphicon-user"></span> About Us</a>
+      </li>
       <li class="active">
-        <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
-      </li>
-      <li>
-        <a href="/shop"><span class="glyphicon glyphicon-user"></span> Shop</a>
-      </li>
-      <li>
-        <a href="/about-us"><span class="glyphicon glyphicon-user"></span> About Us</a>
-      </li>
-      <li>
-        <a href="/contact"><span class="glyphicon glyphicon-user"></span> Contact</a>
+        <a href="/contact.php"><span class="glyphicon glyphicon-user"></span> Contact</a>
       </li>
       
     </ul>
@@ -130,7 +130,7 @@ while ($row = pg_fetch_array($result))
 <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-5 pure-u-lg-1-3">
           </div>
     </div>
-    
+
   <div class="footer l-box is-center pure-u-1 pure-u-md-1 pure-u-lg-1">
     Designed by Kyu and Luisa
 </div>
