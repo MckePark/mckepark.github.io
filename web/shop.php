@@ -69,7 +69,7 @@ while ($row = pg_fetch_row($result))
 
     echo <<<"HEREDOC"
 
-  <div class="item pure-u-md-1 pure-u-lg-1">
+  <div class="item pure-u-md-1 pure-u-lg-1" style="width:300px; float:center; margin: 0 auto;">
     <img class="shop-img" id="img$id" src="$img"><br>
     $name<br>
     $price<br>
